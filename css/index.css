@@ -22,6 +22,18 @@ html{
 ::-webkit-scrollbar-thumb{
     background: green;
 }
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: lightcoral;
+}
 .header{
     padding: 2rem 9%;
     position: sticky;
@@ -61,11 +73,142 @@ input{
     text-transform: none;
 }
 label{
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     padding-right: 1.7rem;
     cursor: pointer;
     color: green;
 }
 label:hover{
-    color: lightgrey;
+    color: lightcoral;
+}
+.icons div{
+    margin-left: 2rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: green;
+}
+.icons div:hover{
+    color: lightcoral;
+}
+#search-btn{
+    display: none;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+}
+#closer{
+    position: fixed;
+    top: 1.5rem;
+    right: 2rem;
+    font-size: 5rem;
+    cursor: pointer;
+    z-index: 10000;
+    color: green;
+    animation: rotate .4s linear .4s backwards;
+    display: none;
+}
+#closer:hover{
+    color: lightcoral;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    right: -101%;
+    z-index: 1000;
+    width: 35rem;
+    height: 100vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+.navbar.active{
+    right: 0;
+    box-shadow: 0 0 5px blueviolet;
+    transition: .4s linear;
+}
+.navbar a{
+    margin: 1rem 0;
+    font-size: 2.5rem;
+    color: green;
+}
+.navbar a:hover{
+    color: lightcoral;
+}
+.shopping-cart{
+    position: fixed;
+    top: 0;
+    right:-101%;
+    z-index: 1000;
+    width: 35rem;
+    height: 100vh;
+    background: white;
+    padding: 2rem;
+    padding-top: 8rem;
+    overflow-y: scroll;
+}
+.shopping-cart.active{
+    right: 0;
+    box-shadow: 0 0 5px blueviolet;
+    transition: .4s linear;
+}
+::-webkit-scrollbar{
+    width: 1rem;
+}
+::-webkit-scrollbar-track{
+    background: white;
+}
+::-webkit-scrollbar-thumb{
+    background: green;
+}
+.box{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+    margin-bottom: 1rem;
+}
+.fa-solid fa-xmark{
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: green;
+    cursor: pointer;
+}
+.fa-solid fa-xmark:hover{
+    color: lightcoral;
+}
+img{
+    height: 8rem;
+}
+.content h3{
+    color: green;
+    font-size: 1.8rem;
+    padding-bottom: .5rem;
+}
+.content span{
+    font-size: 1.5rem;
+    color: green;
+}
+.content span .multiply{
+    margin: 0 1rem;
+}
+.total{
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem 0;
+    color: green;
+}
+.total span{
+    color: green;
+}
+.btn{
+    width: 100%;
+    text-align: center;
 }

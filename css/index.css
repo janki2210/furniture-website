@@ -22,6 +22,9 @@ html{
 ::-webkit-scrollbar-thumb{
     background: green;
 }
+section{
+    padding: 3rem 9%;
+}
 .btn{
     display: inline-block;
     margin-top: 1rem;
@@ -139,6 +142,7 @@ label:hover{
 .navbar a:hover{
     color: lightcoral;
 }
+/* shopping cart section */
 .shopping-cart{
     position: fixed;
     top: 0;
@@ -165,14 +169,14 @@ label:hover{
 ::-webkit-scrollbar-thumb{
     background: green;
 }
-.box{
+.shopping-cart .box{
     display: flex;
     align-items: center;
     gap: 1.5rem;
     position: relative;
     margin-bottom: 1rem;
 }
-.fa-solid fa-xmark{
+.shopping-cart .box .fa-solid fa-xmark{
     position: absolute;
     top: 50%;
     right: 2rem;
@@ -181,37 +185,38 @@ label:hover{
     color: green;
     cursor: pointer;
 }
-.fa-solid fa-xmark:hover{
+.shopping-cart .box .fa-solid fa-xmark:hover{
     color: lightcoral;
 }
-img{
+.shopping-cart .box img{
     height: 8rem;
 }
-.content h3{
+.shopping-cart .box .content h3{
     color: green;
     font-size: 1.8rem;
     padding-bottom: .5rem;
 }
-.content span{
+.shopping-cart .box .content span{
     font-size: 1.5rem;
     color: green;
 }
-.content span .multiply{
+.shopping-cart .box .content span .multiply{
     margin: 0 1rem;
 }
-.total{
+.shopping-cart .total{
     text-align: center;
     font-size: 2rem;
     padding: 1rem 0;
     color: green;
 }
-.total span{
+.shopping-cart .total span{
     color: green;
 }
-.btn{
+.shopping-cart .btn{
     width: 100%;
     text-align: center;
 }
+/* login form */
 .login-form{
     position: fixed;
     top: 0;
@@ -230,16 +235,20 @@ img{
     box-shadow: 0 0 5px blueviolet;
     transition: .4s linear;
 }
-form{
+.login-form form{
     padding: 1.7rem;
     border: 1px solid green;
 }
-h3{
+.login-form form h3{
     font-size: 2.2rem;
     padding-bottom: 1rem;
     color: green;
 }
-.box{
+.login-form form input{
+    border: 1px solid gray;
+    padding: 1rem;
+}
+.login-form form input .box{
     width: 100%;
     text-transform: none;
     font-size: 1.5rem;
@@ -248,12 +257,12 @@ h3{
     margin: .7rem 0;
     border: 1px solid black;
 }
-.remember{
+.login-form form .remember{
     display: flex;
     align-items: center;
     gap: .5rem;
 }
-.remember input{
+.login-form form .remember input{
     /* height: 100%; */
     /* width: 100%; */
     padding: 0 1.2rem;
@@ -261,26 +270,26 @@ h3{
     color: green;
     text-transform: none;
 }
-label{
+.login-form form.remember label{
     cursor: pointer;
     font-size: 1.5rem;
     color:green;
     padding: 1rem 0;
 }
-.btn{
+.login-form form input .btn{
     margin: 1rem 0;
     width: 100%;
     text-align: center;
 }
-p{
+.login-form form p{
     padding-top: 1rem;
     font-size: 1.4rem;
     color: green;
 }
-a{
+.login-form form p a{
     color: green;
 }
-a:hover{
+.login-form form p a:hover{
     color: lightcoral;
 }
 
@@ -292,7 +301,10 @@ a:hover{
 
 
 
-
+/* footer section */
+.footer{
+    background: lightgray;
+}
 
 
 
@@ -305,6 +317,9 @@ a:hover{
     .header{
         padding:2rem;
     }
+    section{
+        padding: 3rem 2rem;
+    }   
 }
 @media (max-width:768px){
     #search-btn{

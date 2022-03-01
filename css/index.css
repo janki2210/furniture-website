@@ -13,7 +13,7 @@ html{
     font-size: 62.5%;
     overflow-x: hidden;
 }
-::-webkit-scrollbar{
+/* ::-webkit-scrollbar{
     width: 1rem;
 }
 ::-webkit-scrollbar-track{
@@ -21,7 +21,7 @@ html{
 }
 ::-webkit-scrollbar-thumb{
     background: green;
-}
+} */
 section{
     padding: 3rem 9%;
 }
@@ -44,28 +44,30 @@ section{
     right: 0;
     left: 0;
     z-index: 100;
-    background: lightgray;
+    /* background: lightgray; */
+    background: #151D3B;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.logo{
+.header .logo{
     font-size: 2.5rem;
-    color: green;
+    /* color: green; */
+    color: white;
     font-weight: bolder;
 }
-i{
+.header .logo i{
     padding-right: .3rem;
 }
-.search-form{
+.header .search-form{
     height: 5rem;
     width: 50rem;
     border-radius: 5rem;
-    background: white;
+    background:white;
     overflow: hidden;
     display: flex;
     align-items: center;
-    border: 1px solid green;
+    border: 1px solid black;
 }
 .search-form input{
     height: 100%;
@@ -79,10 +81,11 @@ label{
     font-size: 2.2rem;
     padding-right: 1.7rem;
     cursor: pointer;
-    color: green;
+    color:gray;
 }
 label:hover{
-    color: lightcoral;
+    /* color: lightcoral; */
+    color: #D82148;
 }
 .icons div{
     margin-left: 2rem;
@@ -305,10 +308,53 @@ label:hover{
 .footer{
     background: lightgray;
 }
-
-
-
-
+.footer .box-container{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer .box-container .box h3{
+    font-size: 2.2rem;
+    color: green;
+    padding: 1rem 0;
+}
+.footer .box-container .box p{
+    font-size: 1.6rem;
+    color: green;
+    padding-bottom: 1rem;
+}
+.footer .box-container .box a{
+    font-size: 1.4rem;
+    color: green;
+    padding: 1rem 0;
+    display: block;
+}
+.footer .box-container .box a:hover{
+    color: lightcoral;
+}
+.footer .box-container .box a i{
+    padding-right: .5rem;
+    color: green;
+}
+.footer .box-container .box a i:hover{
+    padding-right: 2rem;
+}
+.footer .box-container .box form input{
+    width: 100%;
+    padding: 1rem 1.2rem;
+    font-size: 1.6rem;
+    color: white;
+    text-transform: none;
+    margin: .7rem 0;
+}
+.credit{
+    text-align: center;
+    font-size: 2rem;
+    /* color:green; */
+    color: white;
+    /* background: lightgray; */
+    background: #151D3B;
+}
 
 @media (max-width:991px){
     html{
@@ -337,6 +383,9 @@ label:hover{
     }
     .header .search-form.active{
         top: 99%;
+    }
+    .footer .box-container{
+        display: inline-block;
     }
 }
 @media (max-width:450px){

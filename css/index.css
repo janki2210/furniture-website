@@ -13,15 +13,6 @@ html{
     font-size: 62.5%;
     overflow-x: hidden;
 }
-/* ::-webkit-scrollbar{
-    width: 1rem;
-}
-::-webkit-scrollbar-track{
-    background: white;
-}
-::-webkit-scrollbar-thumb{
-    background: green;
-} */
 section{
     padding: 3rem 9%;
 }
@@ -30,7 +21,6 @@ section{
     margin-top: 1rem;
     padding: .9rem 3rem;
     font-size: 1.7rem;
-    /* background-color: green; */
     background: #C84B31;
     color: white;
     cursor: pointer;
@@ -45,7 +35,6 @@ section{
     right: 0;
     left: 0;
     z-index: 100;
-    /* background: lightgray; */
     background: #151D3B;
     display: flex;
     align-items: center;
@@ -53,7 +42,6 @@ section{
 }
 .header .logo{
     font-size: 2.5rem;
-    /* color: green; */
     color: white;
     font-weight: bolder;
 }
@@ -85,7 +73,6 @@ label{
     color:gray;
 }
 label:hover{
-    /* color: lightcoral; */
     color: #D82148;
 }
 .icons div{
@@ -95,12 +82,12 @@ label:hover{
     color: white;
 }
 .icons div:hover{
-    /* color: lightcoral; */
     color: #D82148;
 }
 #search-btn{
     display: none;
 }
+/* closer section */
 @keyframes rotate{
     0%{
         transform: rotate(360deg);
@@ -119,9 +106,9 @@ label:hover{
     display: none;
 }
 #closer:hover{
-    /* color: lightcoral; */
     color: #D82148;
 }
+/* menu section */
 .navbar{
     position: fixed;
     top: 0;
@@ -168,15 +155,6 @@ label:hover{
     right: 0;
     box-shadow: 0 0 10px gray;
     transition: .4s linear;
-}
-::-webkit-scrollbar{
-    width: 1rem;
-}
-::-webkit-scrollbar-track{
-    background: white;
-}
-::-webkit-scrollbar-thumb{
-    background: green;
 }
 .shopping-cart .box{
     display: flex;
@@ -306,6 +284,18 @@ label:hover{
     color: lightcoral;
 }
 /*home section */
+@keyframes fadeout{
+    0%{
+        transform: scale(.5);
+        opacity: 0;
+    }
+}
+@keyframes fadeleft{
+    0%{
+        transform: translateX(-5rem);
+        opacity: 0;
+    }
+}
 .home{
     position: relative;
 }
@@ -321,6 +311,7 @@ label:hover{
 }
 .home .slides-container .slide .content{
     flex: 1 1 40rem;
+    animation: fadeleft .4s linear .4s backwards;
 }
 .home .slides-container .slide .content span{
     font-size: 2.5rem;
@@ -339,10 +330,12 @@ label:hover{
 }
 .home .slides-container .slide .image{
     flex: 1 1 40rem;
+    padding: 3rem 0;
 }
 .home .slides-container .slide .image img{
     width: 100%;
-    height: 500px;
+    /* height: 500px; */
+    animation: fadeout .4s linear;
 }
 .home #slide-next,#slide-prev{
     position: absolute;
@@ -368,10 +361,39 @@ label:hover{
 .home #slide-prev{
     left: 2rem;
 }
-
-
-
-
+/* banner section */
+.banner-container{
+    grid: 30rem;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.banner-container .banner{
+    height: 25rem;
+    overflow: hidden;
+    position: relative;
+    background: gray;
+}
+.banner-container .banner img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.banner-container .banner .content{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2rem;
+}
+.banner-container .banner .content span{
+    font-size: 1.7rem;
+    color: blue;
+}
+.banner-container .banner .content h3{
+    font-size: 2.2rem;
+    padding-top: .5rem;
+    color: red;
+}
 
 /* footer section */
 .footer{
@@ -434,6 +456,13 @@ label:hover{
     }
     section{
         padding: 3rem 2rem;
+    }
+    .home #slide-next,#slide-prev{
+        top: 95%;
+    }
+    .home #slide-prev{
+        left: auto;
+        right: 8rem;
     }   
 }
 @media (max-width:768px){
@@ -453,6 +482,13 @@ label:hover{
     .header .search-form.active{
         top: 99%;
     }
+    /* .banner-container{
+        display: block;
+    } */
+    .banner-container .banner{
+        margin: 2rem;
+        width: 50%;
+    }
     .footer .box-container{
         display: inline-block;
     }
@@ -460,5 +496,15 @@ label:hover{
 @media (max-width:450px){
     html{
         font-size: 50%;
+    }
+    .home .slides-container .slide .content h3{
+        font-size: 4rem;
+    }
+    .banner-container{
+        display: block;
+    }
+    .banner-container .banner{
+        margin: 1rem;
+        width: 100%;
     }
 }
